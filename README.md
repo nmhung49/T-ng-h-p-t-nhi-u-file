@@ -60,7 +60,7 @@ Sub Main()
   On Error Resume Next
   vFile = Application.GetOpenFilename("Excel File, *.xls; *.xlsx; *.xlsm", , , , True)
   If TypeName(vFile) = "Variant()" Then
-    SheetName = "Sheet1": RangeAddress = "A8:V10000"
+    SheetName = "Sheet2": RangeAddress = "A8:AV10000"
     For Each FileItem In vFile
       FileName = CStr(FileItem)
       If UCase(FileName) <> UCase(ThisWorkbook.FullName) Then
@@ -74,3 +74,4 @@ Sub Main()
     MsgBox "Done!"
   End If
 End Sub
+
